@@ -1,29 +1,19 @@
 import React from "react";
 import { createAppContainer } from "react-navigation";
 import { createBottomTabNavigator } from "react-navigation-tabs";
-import Instagram from "./assets/scr/Instagram";
-import facebook from "./scr/facebook";
-import instagram from "./scr/Instagram";
-
-
+import Instagram from "./scr/Instagram";
+import Facebook from "./scr/facebook";
 
 export default class App extends React.Component{
 render(){
 return<AppContainer></AppContainer>
-
-
-
-
 }
-
-
-
-
-
-
 }
-const TabNavigator=createBottomTabNavigator({facebook: {scr: facebook},
-  instagram: {scr: Instagram }})
+const TabNavigator=createBottomTabNavigator(
+  {Facebook: {screen: Facebook},
+  Instagram: {screen: Instagram}
+}
+)
 
 const AppContainer= createAppContainer(TabNavigator)
     
